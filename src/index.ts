@@ -1,10 +1,12 @@
-function component() {
-  let element = document.createElement('div');
+import { Core } from "core";
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = ['Hello', 'webpack', '!!'].join(' ');
-
-  return element;
+// we are using side effects so disable this tslint rule
+// tslint:disable:no-unused-expression
+class App {
+  constructor() {
+    new Core();
+  }
 }
 
-document.body.appendChild(component());
+new App();
+// tslint:enable:no-unused-expression

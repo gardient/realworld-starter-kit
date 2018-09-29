@@ -1,0 +1,22 @@
+import { WebComponent } from "shared/web-component.interface";
+
+class CoreFooterComponent extends WebComponent {
+  constructor() {
+    super();
+  }
+
+  public connectedCallback() {
+    this.innerHTML = `<footer>
+    <div class="container">
+        <a href="/" class="logo-font">conduit</a>
+        <span class="attribution">
+          An interactive learning project from
+          <a href="https://thinkster.io">Thinkster</a>.
+          Code &amp; design licensed under MIT.
+        </span>
+    </div>
+</footer>`;
+  }
+}
+
+export default { tag: "core-footer", constructor: CoreFooterComponent };

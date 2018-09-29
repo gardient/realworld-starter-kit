@@ -20,7 +20,9 @@
     "moduleResolution": "node",
     "baseUrl": "./src",
     "paths": {
-      "@src/*": ["./*"]
+      "@src/*": ["./*"],
+      "@components": ["./components"],
+      "@components/*": ["./components/*"]
     }
   }
 }
