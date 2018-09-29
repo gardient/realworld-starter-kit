@@ -1,9 +1,4 @@
-export interface IWebComponent {
-  observedAttributes: string[];
-  attributeChangedCallback: (attributeName: string, oldValue: any, newValue: any) => void;
-}
-
-export class WebComponent extends HTMLElement implements IWebComponent {
+export abstract class WebComponent extends HTMLElement {
   private attributeToCallbackMap: Map<string, (oldValue: any, newValue: any) => void>;
 
   constructor() {
@@ -37,4 +32,18 @@ export class WebComponent extends HTMLElement implements IWebComponent {
       },
     };
   }
+
+  public disconnectedCallback() {
+    return;
+  }
+
+  public connectedCallback() {
+    this.preRender();
+    this.innerHTML = this.render();
+    this.postRender();
+  }
+
+  protected preRender(): void { return; }
+  protected postRender(): void { return; }
+  protected abstract render(): string;
 }
