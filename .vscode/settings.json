@@ -1,0 +1,8 @@
+{
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "javascript.format.insertSpaceAfterConstructor": false,
+  "typescript.format.insertSpaceAfterConstructor": false,
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double"
+}
