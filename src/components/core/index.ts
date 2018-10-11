@@ -1,4 +1,5 @@
-import footer from "./footer.component";
-import nav from "./nav.component";
+import CoreBannerComponent from "./banner.component";
+import CoreFooterComponent from "./footer.component";
+import CoreNavComponent from "./nav.component";
 
-export default [footer, nav];
+export default [CoreFooterComponent, CoreNavComponent, CoreBannerComponent];

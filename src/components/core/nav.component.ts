@@ -1,15 +1,14 @@
-import { WebComponent } from "@components/web-component.base";
+import { WebComponent } from "components/web-component.base";
 
-class CoreNavComponent extends WebComponent {
-  // private linkToHandler: Map<HTMLAnchorElement, () => void | boolean>;
+export class CoreNavComponent extends WebComponent {
+  public static readonly tag = "core-nav";
+
   private signInLink: HTMLLIElement | null = null;
   private signUpLink: HTMLLIElement | null = null;
   private navUL: HTMLUListElement | null = null;
 
   constructor() {
     super();
-
-    // this.linkToHandler = new Map<HTMLAnchorElement, () => void | boolean>();
   }
 
   protected render(): string {
@@ -82,4 +81,4 @@ class CoreNavComponent extends WebComponent {
   }
 }
 
-export default { tag: "core-nav", constructor: CoreNavComponent };
+export default CoreNavComponent;

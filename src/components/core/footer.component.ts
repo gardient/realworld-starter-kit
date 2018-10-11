@@ -1,6 +1,8 @@
-import { WebComponent } from "@components/web-component.base";
+import { WebComponent } from "components/web-component.base";
 
-class CoreFooterComponent extends WebComponent {
+export class CoreFooterComponent extends WebComponent {
+  public static readonly tag = "core-footer";
+
   constructor() {
     super();
   }
@@ -20,4 +22,4 @@ class CoreFooterComponent extends WebComponent {
   }
 }
 
-export default { tag: "core-footer", constructor: CoreFooterComponent };
+export default CoreFooterComponent;

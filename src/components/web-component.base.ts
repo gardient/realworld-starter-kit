@@ -1,4 +1,6 @@
-export abstract class WebComponent extends HTMLElement {
+import { IUnsubscribeable } from "models/unsubscribable.interface";
+
+export class WebComponent extends HTMLElement {
   private attributeToCallbackMap: Map<string, (oldValue: any, newValue: any) => void>;
 
   constructor() {
@@ -23,7 +25,7 @@ export abstract class WebComponent extends HTMLElement {
   public subscribeToAttribute(
     name: string,
     callback: (oldValue: any, newValue: any) => void,
-  ): { unsubscribe: () => void } {
+  ): IUnsubscribeable {
     this.attributeToCallbackMap.set(name, callback);
 
     return {
@@ -45,5 +47,7 @@ export abstract class WebComponent extends HTMLElement {
 
   protected preRender(): void { return; }
   protected postRender(): void { return; }
-  protected abstract render(): string;
+  protected render(): string { throw new Error("You should overwrite render in your component"); }
 }
+
+export default WebComponent;

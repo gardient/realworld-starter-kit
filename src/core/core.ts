@@ -1,4 +1,5 @@
-import components from "@components";
+import components from "components";
+import RouterOutletComponent from "routing/router-outlet.component";
 
 export class Core {
   private static inst: Core;
@@ -10,8 +11,9 @@ export class Core {
       throw new Error("already instantiated, use Core.instance");
     }
 
-    components.forEach((component) => {
-      window.customElements.define(component.tag, component.constructor);
+    [...components, RouterOutletComponent].forEach((component) => {
+      // we have to assert to any here because tsc does not like treating imported types as constructors
+      window.customElements.define(component.tag, component);
     });
   }
 
