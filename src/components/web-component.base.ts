@@ -1,6 +1,6 @@
 import { IUnsubscribeable } from "models/unsubscribable.interface";
 
-export class WebComponent extends HTMLElement {
+export abstract class WebComponent extends HTMLElement {
   private attributeToCallbackMap: Map<string, (oldValue: any, newValue: any) => void>;
 
   constructor() {

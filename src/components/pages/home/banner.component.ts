@@ -1,6 +1,6 @@
 import { WebComponent } from "components/web-component.base";
 
-export class CoreBannerComponent extends WebComponent {
+export class BannerComponent extends WebComponent {
   public static readonly tag = "core-banner";
 
   constructor() {
@@ -18,4 +18,4 @@ export class CoreBannerComponent extends WebComponent {
   }
 }
 
-export default CoreBannerComponent;
+export default BannerComponent;

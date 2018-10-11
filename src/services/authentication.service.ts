@@ -1,17 +1,6 @@
 import { IUnsubscribeable } from "models/unsubscribable.interface";
+import { IUser, IUserResponse } from "models/user.interface";
 import apiClient from "./api-client.service";
-
-interface IUserResponse {
-  user: IUser;
-}
-
-export interface IUser {
-  email: string;
-  username: string;
-  bio: string;
-  image: string;
-  token: string;
-}
 
 export class Authentication {
   private static inst: Authentication;

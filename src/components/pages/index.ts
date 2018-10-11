@@ -1,2 +1,2 @@
-import HomePageComponent from "./home.component";
-export default [HomePageComponent];
+import HomePage from "./home";
+export default [...HomePage];

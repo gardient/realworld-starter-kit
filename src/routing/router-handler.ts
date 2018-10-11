@@ -1,4 +1,4 @@
-import HomePageComponent from "components/pages/home.component";
+import HomePageComponent from "components/pages/home/home.component";
 import WebComponent from "components/web-component.base";
 import Navigo = require("navigo");
 
